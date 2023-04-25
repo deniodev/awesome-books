@@ -59,15 +59,15 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome Book] <a name="about-project"></a>
+# 📖 [Awesome Books] <a name="about-project"></a>
 
-**[your_project__name]** is a project that stores the book dynamically and view books stored in localStorage in browser on UI.
+**[Awesome Books]** is a project that stores the book dynamically and view books stored in localStorage in browser on UI.
 
 ## 🛠 Built With <a name="built-with">HTML&Javascript</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+
 
 <details>
   <summary>Client</summary>
@@ -81,7 +81,7 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+
 
 - **[Display books on UI]**
 - **[Store books in LocalStorage]**
@@ -93,7 +93,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+
 
 - [Live Demo Link](https://deniodev.github.io/awesome-books/)
 
@@ -103,7 +103,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+
 
 To get a local copy up and running, follow these steps.
 
@@ -154,7 +154,7 @@ Example command:
 
 ### Run tests
 
-To run tests, run the following command:
+N/A
 
 <!--
 Example command:
@@ -182,7 +182,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+
 
 👤 **Munana Clinton**
 
@@ -202,7 +202,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+
 
 - [ ] **[style the UI to look better]**
 - [ ] **[new_feature_2]**

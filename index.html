@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
     <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Awesome Books</h1>
 
-    <section id="book-list">
-                   
+    <!-- <h1>Awesome Books</h1> -->
+    <main>
+    <section id="all-books">    
+     <p class="book-intro">All Awesome books</p>
+    <div id="book-list" class="book-list"></div>
+    <hr>
     </section>
-
-    <form id="form" method="post">
-
-        <p>
-            <input type="text" placeholder="Title" id="name-of-book" required>
-        </p>
-        <p>
-            <input type="text" placeholder="Author" id="author-of-book" required>
-        </p>
-                
-        <button type="submit" class="add-book-button">Add</button>
+    <section id="add-new-book">
+    <p class="add-new-book">Add a new Book</p>
+    <form action="" id="book-form">
+        <input type="text" placeholder="Title" id="name-of-book" class="title">
+        <input type="text" placeholder="Author" id="author-of-book" class="author"></p>   
+        <input type="submit" value="Add" class="add-book-button">
     </form>
-    
+    </section>
+    </main>
 
-<script src="./main.js"></script>    
+<script type="module" src="./app.js"></script>    
 </body>
 </html>

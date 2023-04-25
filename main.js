@@ -32,6 +32,12 @@ class Display {
       book.parentElement.remove();
     }
   }
+
+  static clearInputs() {
+    document.getElementById('name-of-book').value = '';
+    document.getElementById('author-of-book').value = '';
+  }
+
 }
 
 // Preserve data in a browser using LocalStorage
@@ -48,6 +54,7 @@ static getBooks() {
 
 static addBook(book) {
   const books = Store.getBooks();
+  //
   books.push(book);
   localStorage.setItem('books', JSON.stringify(books));
 }
@@ -74,11 +81,17 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const nameOfBookField = document.querySelector('#name-of-book').value;
   const authorOfBookField = document.querySelector('#author-of-book').value;
 
+  if(nameOfBookField === '' || authorOfBookField === '') {
+    Display;
+  } else {
   const book = new Book(nameOfBookField, authorOfBookField);
 
   Display.addBookToList(book);
 
   Store.addBook(book);
+
+  Display.clearInputs();
+  }
 });
 
 const bookList = document.getElementById('book-list');

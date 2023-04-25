@@ -1,3 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: cursive;
+}
+
 h1 {
   color: black;
+  font-size: 2em;
+}
+
+#all-books {
+  margin-top: 10%;
+}
+
+.book-intro,
+.add-new-book {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 60%;
+  margin: auto;
+}
+
+.my-book {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.my-book:nth-child(even) {
+  background-color: #e2dfdf;
+}
+
+div.book-name-and-author {
+  display: flex;
+  gap: 5px;
+  margin-left: 5%;
+}
+
+.remove-book-button {
+  margin-right: 5%;
+  width: 8%;
+  border-style: none;
+  border: 1px solid black;
+  box-shadow: 2px 2px #131212;
+}
+
+hr {
+  width: 30%;
+  margin: 1% auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 10px;
+  margin: 2% auto 0 auto;
+}
+
+.title,
+.author {
+  width: 95%;
+  padding: 2%;
+}
+
+.add-book-button {
+  align-self: flex-end;
+  margin-right: 5%;
+  width: 12%;
+  border-style: none;
+  border: 1px solid black;
+  box-shadow: 2px 2px #131212;
+  padding: 1%;
+}
+
+.add-book-button:hover,
+.remove-book-button:hover {
+  background: white;
 }

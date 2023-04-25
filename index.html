@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
     <title>Awesome Books</title>
 </head>
 <body>
-    <h1>Awesome Books</h1>
 
+    <!-- <h1>Awesome Books</h1> -->
+    <main>
+    <section id="all-books">    
+     <p class="book-intro">All Awesome books</p>
     <div id="book-list" class="book-list"></div>
-
+    <hr>
+    </section>
+    <section id="add-new-book">
+    <p class="add-new-book">Add a new Book</p>
     <form action="" id="book-form">
-        <div class="form-group">
-            <div>
-                <p><input type="text" placeholder="Title" id="name-of-book"></p>
-            </div>
-            <div>
-                <p><input type="text" placeholder="Author" id="author-of-book"></p>
-            </div>            
-        </div>     
-        <input type="submit" value="Add" class="add-book-button"></input>
+        <input type="text" placeholder="Title" id="name-of-book" class="title">
+        <input type="text" placeholder="Author" id="author-of-book" class="author"></p>   
+        <input type="submit" value="Add" class="add-book-button">
     </form>
-    
+    </section>
+    </main>
 
 <script src="./main.js"></script>    
 </body>

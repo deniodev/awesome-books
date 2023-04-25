@@ -29,7 +29,7 @@ class Display {
 
   static removeBook(book) {
     if(book.classList.contains('remove-book-button')) {
-      book.parentElement.parentElement.remove();
+      book.parentElement.remove();
     }
   }
 }
@@ -81,13 +81,13 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   Store.addBook(book);
 });
 
-const bookList = document.getElementById('#book-list');
+const bookList = document.getElementById('book-list');
 //Remove Book event Listener
 bookList.addEventListener('click', (e) => {
 Display.removeBook(e.target);
 
 
-Store.deleteBook(e.target.previousElementSibling.previousElementSibling.previousElementSibling.textContent); 
+Store.deleteBook(e.target.previousElementSibling.previousElementSibling.textContent); 
 
 });
 

@@ -190,11 +190,11 @@ Example:
 - Twitter: [@twitterhandle](https://twitter.com/ClintonMunana)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/munana-clinton-b6122720b/)
 
-👤 **Author2**
+👤 **Denio Nhanale**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/deniodev)
+- Twitter: [@twitterhandle](https://twitter.com/DNhanale)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/denionhanale/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,73 +1,102 @@
-const addBookBtn = document.querySelector('.add-book-button');
-const bookList = document.querySelector('#book-list');
+//Declare the Book class
+class Book {
+  constructor(title, author) {
+      this.title = title;
+      this.author = author;
+  }
+}
 
-let books = [];
+//Declare the Display Class
+class Display {
+   static displayBooks() {
+      const books = Store.getBooks();
+      books.forEach((book) => {
+        Display.addBookToList(book);
+      });
+  }
 
-const displayBooks = () => {
-  const book = localStorage.getItem('book');
-  if (book === null) {
+   static addBookToList(book) {
+    const list = document.querySelector('#book-list'); 
+    const newBook = document.createElement('div');
+    list.appendChild(newBook);
+    newBook.innerHTML = `
+    <p>${book.title}</p>
+    <p>${book.author}</p>
+    <button class="remove-book-button">Remove</button>
+    <hr>`;      
+    
+  }
+
+  static removeBook(book) {
+    if(book.classList.contains('remove-book-button')) {
+      book.parentElement.parentElement.remove();
+    }
+  }
+}
+
+// Preserve data in a browser using LocalStorage
+class Store {
+static getBooks() {
+  let books;
+  if (localStorage.getItem('books') === null) {
     books = [];
   } else {
-    books = JSON.parse(book);
+    books = JSON.parse(localStorage.getItem('books'));
   }
-  let listOfbook = '';
-  books.forEach((item, index) => {
-    listOfbook += `<div>
-    <p class="name-of-book">${item.title}</p>
-    <p class="author-of-book">${item.author}</p>
-    <button type="button" class="remove-book-button" id="${index}" onclick="removeBook(${index})">Remove</button>
-    <hr>
-    </div>`;
+  return books;
+}
+
+static addBook(book) {
+  const books = Store.getBooks();
+  books.push(book);
+  localStorage.setItem('books', JSON.stringify(books));
+}
+
+static deleteBook(title) {
+  const books = Store.getBooks();
+
+  books.forEach((book, index) => {
+    if (book.title === title) {
+        books.splice(index, 1);
+    }
   });
-  bookList.innerHTML = listOfbook;
-};
 
-function clearField() {
-  const title = document.getElementById('name-of-book');
-  const author = document.getElementById('author-of-book');
-
-  title.value = '';
-  author.value = '';
+  localStorage.setItem('books', JSON.stringify(books)); 
+}
 }
 
-function AddBooks(title, author) {
-  const book = localStorage.getItem('book');
-  if (book === null) {
-    books = [];
-  } else {
-    books = JSON.parse(book);
-  }
-  books.push(
-    {
-      title,
-      author,
-    },
-  );
-  localStorage.setItem('book', JSON.stringify(books));
-  clearField();
-  displayBooks();
-}
 
-addBookBtn.addEventListener('click', (e) => {
+document.addEventListener('DOMContentLoaded', Display.displayBooks);
+
+//Add Book Event Listener
+document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
-  const title = document.getElementById('name-of-book').value;
-  const author = document.getElementById('author-of-book').value;
-  if (title && author !== '') {
-    AddBooks(title, author);
-  }
+  const nameOfBookField = document.querySelector('#name-of-book').value;
+  const authorOfBookField = document.querySelector('#author-of-book').value;
+
+  const book = new Book(nameOfBookField, authorOfBookField);
+
+  Display.addBookToList(book);
+
+  Store.addBook(book);
 });
 
-function removeBook(index) {
-  const book = localStorage.getItem('book');
-  books = JSON.parse(book);
-  books.splice(index, 1);
-  localStorage.setItem('book', JSON.stringify(books));
-  displayBooks();
-}
-const removeBtn = document.querySelectorAll('div button');
-if (removeBtn.length > 0) {
-  removeBtn.forEach((e) => e.addEventListener('click', (e) => {
-    removeBook(e.target.id);
-  }));
-}
-displayBooks();
+const bookList = document.getElementById('#book-list');
+//Remove Book event Listener
+bookList.addEventListener('click', (e) => {
+Display.removeBook(e.target);
+
+
+Store.deleteBook(e.target.previousElementSibling.previousElementSibling.previousElementSibling.textContent); 
+
+});
+
+
+
+
+
+
+
+
+
+

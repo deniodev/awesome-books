@@ -131,50 +131,25 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+N/A
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
+N/A
 
 ### Run tests
 
 N/A
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-Example:
-
-```sh
-
-```
- -->
+You can deploy this project using:
+- Free deployment services like GitHub pages.
+- Any deployment services of your choice.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

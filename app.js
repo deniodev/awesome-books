@@ -29,3 +29,38 @@ bookList.addEventListener('click', (e) => {
 
   Store.deleteBook(e.target.previousElementSibling.firstElementChild.textContent);
 });
+
+const list= document.querySelector('.list');
+const addNew= document.querySelector('.form-inputs')
+const contact= document.querySelector('.contact')
+const allbooks= document.querySelector('#all-books')
+const addbooks= document.querySelector('#add-new-books')
+const contactUs= document.querySelector('#contact')
+
+list.addEventListener('click',()=>{
+   console.log('clicked');
+   addbooks.classList.add('active');
+   contactUs.classList.add('active');
+   allbooks.classList.remove('active')
+
+})
+
+addNew.addEventListener('click',()=>{
+  console.log('clicked');
+  addbooks.classList.remove('active')
+  contactUs.classList.add('active');
+  allbooks.classList.add('active');
+})
+
+contact.addEventListener('click',()=>{
+  console.log('clicked');
+  contactUs.classList.remove('active')
+  addbooks.classList.add('active');
+  allbooks.classList.add('active');
+})
+
+window.addEventListener('load',()=>{
+  addbooks.classList.add('active');
+  contactUs.classList.add('active');
+  allbooks.classList.remove('active')
+})

@@ -5,12 +5,47 @@
 
 body {
   font-family: cursive;
+  position:relative;
+  height: 90vh;
 }
 
+a{
+  text-decoration: none;
+  color:black;
+  font-size:1.3em;
+  margin-right: 0.8rem;
+}
+
+header {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  width:90%;
+  border:1px solid black;
+  margin:auto;
+  padding:1% 4% 1% 4%;
+}
+header > ul{
+  list-style-type: none;
+  display:flex;
+  gap:8px;
+  
+}
+
+.list{
+  border-right: 1px solid black;
+  /* padding-right:8%; */
+}
+
+.form-inputs {
+  border-right: 1px solid black;
+  /* padding-right:20%; */
+}
 h1 {
   color: black;
   font-size: 2em;
 }
+
 
 #all-books {
   margin-top: 10%;
@@ -86,4 +121,34 @@ form {
 .add-book-button:hover,
 .remove-book-button:hover {
   background: white;
+}
+
+#contact {
+  width: 30%;
+  margin:auto;
+}
+
+#contact > h1{
+  text-align:center
+}
+
+#add-new-books.active {
+  display:none;
+}
+#all-books.active{
+  display:none;
+}
+
+#contact.active{
+  display:none;
+}
+
+footer {
+  width: 90%;
+  margin:auto;
+  border:1px solid black;
+  position:absolute;
+  top:102%;
+  left:5%;
+  right:5%;
 }

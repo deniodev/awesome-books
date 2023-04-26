@@ -131,17 +131,14 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-N/A
+-you can download it as a zipped file
+-you can clone it using OS terminal or code editor terminal-
 
 ### Usage
 
 To run the project, execute the following command:
 
-N/A
-
-### Run tests
-
-N/A
+-Run the index.html with your preferred browser.
 
 ### Deployment
 

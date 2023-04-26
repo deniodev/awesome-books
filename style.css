@@ -16,7 +16,7 @@ a {
   margin-right: 0.8rem;
 }
 
-header {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,7 +26,7 @@ header {
   padding: 1% 4% 1% 4%;
 }
 
-header > ul {
+nav > ul {
   list-style-type: none;
   display: flex;
   gap: 8px;
@@ -49,8 +49,10 @@ h1 {
   font-size: 2em;
 }
 
-#all-books {
-  margin-top: 10%;
+#all-books,
+#contact,
+#add-new-books {
+  padding-top: 8%;
 }
 
 .book-intro,
@@ -127,7 +129,13 @@ form {
 
 #contact {
   width: 40%;
-  margin: 10% auto;
+  margin: auto;
+}
+
+#date {
+  float: right;
+  margin: 3% 8% 0 0;
+  font-weight: 700;
 }
 
 #contact > h1 {
@@ -140,10 +148,6 @@ form {
 
 .contact-list {
   padding-left: 15%;
-}
-
-#add-new-books {
-  margin-top: 10%;
 }
 
 #add-new-books.active {
@@ -163,7 +167,7 @@ footer {
   margin: auto;
   border: 1px solid black;
   position: absolute;
-  top: 102%;
+  top: 90%;
   left: 5%;
   right: 5%;
 }

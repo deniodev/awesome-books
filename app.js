@@ -29,3 +29,44 @@ bookList.addEventListener('click', (e) => {
 
   Store.deleteBook(e.target.previousElementSibling.firstElementChild.textContent);
 });
+
+const list = document.querySelector('.list');
+const addNew = document.querySelector('.form-inputs');
+const contact = document.querySelector('.contact');
+const allbooks = document.querySelector('#all-books');
+const addbooks = document.querySelector('#add-new-books');
+const contactUs = document.querySelector('#contact');
+
+list.addEventListener('click', () => {
+  addbooks.classList.add('active');
+  contactUs.classList.add('active');
+  allbooks.classList.remove('active');
+});
+
+addNew.addEventListener('click', () => {
+  addbooks.classList.remove('active');
+  contactUs.classList.add('active');
+  allbooks.classList.add('active');
+});
+
+contact.addEventListener('click', () => {
+  contactUs.classList.remove('active');
+  addbooks.classList.add('active');
+  allbooks.classList.add('active');
+});
+
+window.addEventListener('load', () => {
+  addbooks.classList.add('active');
+  contactUs.classList.add('active');
+  allbooks.classList.remove('active');
+});
+
+function updateDatedTime() {
+  const dateToday = new Date();
+  const date = dateToday.toLocaleDateString();
+  const time = dateToday.toLocaleTimeString();
+  document.getElementById('date').innerHTML = `${date} ${time}`;
+}
+
+// Call updateDatedTime function every second to update the time
+setInterval(updateDatedTime, 1000);

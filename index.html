@@ -8,15 +8,24 @@
     <title>Awesome Books</title>
 </head>
 <body>
-
-    <!-- <h1>Awesome Books</h1> -->
+    <header>
+     <nav>   
+    <h1>Awesome Books</h1>
+    <ul> 
+        <li class="list"><a href="#all-books" class="list-nav">List</a></li>
+        <li class="form-inputs"><a href="#add-new-books">Add new</a></li>
+        <li class="contact"><a href="#contact">Contact</a></li>
+        </ul>  
+    </nav>      
+</header>
     <main>
+    <p id="date"></p>
     <section id="all-books">    
      <p class="book-intro">All Awesome books</p>
     <div id="book-list" class="book-list"></div>
     <hr>
     </section>
-    <section id="add-new-book">
+    <section id="add-new-books">
     <p class="add-new-book">Add a new Book</p>
     <form action="" id="book-form">
         <input type="text" placeholder="Title" id="name-of-book" class="title">
@@ -24,8 +33,20 @@
         <input type="submit" value="Add" class="add-book-button">
     </form>
     </section>
+    <section id="contact">
+       <h1>Contact information</h1>
+       <p class="contact-text">Do you have any question or you want to say "Hello"</p>
+       <p class="contact-text">You can reach out to us!</p>
+       <ul class="contact-list">
+        <li>Our Email : munanaclinton@gmail  </li>
+        <li>Our Phone Number: +250789175445 </li>
+        <li>Our Address : Kigali, Maputo</li>
+        </ul>
+        </section>
     </main>
-
+    <footer>
+        <p>@copyright Munana & Denio ltd</p>
+    </footer>
 <script type="module" src="./app.js"></script>    
 </body>
 </html>

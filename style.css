@@ -5,6 +5,43 @@
 
 body {
   font-family: cursive;
+  position: relative;
+  height: 90vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+  margin-right: 0.8rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border: 1px solid black;
+  margin: 5% auto 0 auto;
+  padding: 1% 4% 1% 4%;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+}
+
+.list {
+  border-right: 1px solid black;
+
+  /* padding-right:8%; */
+}
+
+.form-inputs {
+  border-right: 1px solid black;
+
+  /* padding-right:20%; */
 }
 
 h1 {
@@ -12,8 +49,10 @@ h1 {
   font-size: 2em;
 }
 
-#all-books {
-  margin-top: 10%;
+#all-books,
+#contact,
+#add-new-books {
+  padding-top: 8%;
 }
 
 .book-intro,
@@ -86,4 +125,49 @@ form {
 .add-book-button:hover,
 .remove-book-button:hover {
   background: white;
+}
+
+#contact {
+  width: 40%;
+  margin: auto;
+}
+
+#date {
+  float: right;
+  margin: 3% 8% 0 0;
+  font-weight: 700;
+}
+
+#contact > h1 {
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.2em;
+}
+
+.contact-list {
+  padding-left: 15%;
+}
+
+#add-new-books.active {
+  display: none;
+}
+
+#all-books.active {
+  display: none;
+}
+
+#contact.active {
+  display: none;
+}
+
+footer {
+  width: 90%;
+  margin: auto;
+  border: 1px solid black;
+  position: absolute;
+  top: 90%;
+  left: 5%;
+  right: 5%;
 }

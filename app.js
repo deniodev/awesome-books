@@ -60,3 +60,13 @@ window.addEventListener('load', () => {
   contactUs.classList.add('active');
   allbooks.classList.remove('active');
 });
+
+function updateDatedTime() {
+  const dateToday = new Date();
+  const date = dateToday.toLocaleDateString();
+  const time = dateToday.toLocaleTimeString();
+  document.getElementById('date').innerHTML = `${date} ${time}`;
+}
+
+// Call updateDatedTime function every second to update the time
+setInterval(updateDatedTime, 1000);

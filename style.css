@@ -5,47 +5,49 @@
 
 body {
   font-family: cursive;
-  position:relative;
+  position: relative;
   height: 90vh;
 }
 
-a{
+a {
   text-decoration: none;
-  color:black;
-  font-size:1.3em;
+  color: black;
+  font-size: 1.3em;
   margin-right: 0.8rem;
 }
 
 header {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  width:90%;
-  border:1px solid black;
-  margin:auto;
-  padding:1% 4% 1% 4%;
-}
-header > ul{
-  list-style-type: none;
-  display:flex;
-  gap:8px;
-  
+  width: 90%;
+  border: 1px solid black;
+  margin: 5% auto 0 auto;
+  padding: 1% 4% 1% 4%;
 }
 
-.list{
+header > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+}
+
+.list {
   border-right: 1px solid black;
+
   /* padding-right:8%; */
 }
 
 .form-inputs {
   border-right: 1px solid black;
+
   /* padding-right:20%; */
 }
+
 h1 {
   color: black;
   font-size: 2em;
 }
-
 
 #all-books {
   margin-top: 10%;
@@ -124,31 +126,44 @@ form {
 }
 
 #contact {
-  width: 30%;
-  margin:auto;
+  width: 40%;
+  margin: 10% auto;
 }
 
-#contact > h1{
-  text-align:center
+#contact > h1 {
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.2em;
+}
+
+.contact-list {
+  padding-left: 15%;
+}
+
+#add-new-books {
+  margin-top: 10%;
 }
 
 #add-new-books.active {
-  display:none;
-}
-#all-books.active{
-  display:none;
+  display: none;
 }
 
-#contact.active{
-  display:none;
+#all-books.active {
+  display: none;
+}
+
+#contact.active {
+  display: none;
 }
 
 footer {
   width: 90%;
-  margin:auto;
-  border:1px solid black;
-  position:absolute;
-  top:102%;
-  left:5%;
-  right:5%;
+  margin: auto;
+  border: 1px solid black;
+  position: absolute;
+  top: 102%;
+  left: 5%;
+  right: 5%;
 }
